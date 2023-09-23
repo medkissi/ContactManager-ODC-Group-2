@@ -4,7 +4,7 @@ import android.app.Application
 
 class ContactApp:Application() {
     init {
-        app =this
+        app = this
 
     }
 

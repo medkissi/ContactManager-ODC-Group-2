@@ -6,7 +6,7 @@ import com.medkissi.contactmanagergroup2.data.datasource.ContactDatabase
 import com.medkissi.contactmanagergroup2.data.model.Contact
 
 class ContactRepository {
-    private val dao =ContactDatabase.getDatabaseInstance(ContactApp.getAppContext()).dao()
+    private val dao = ContactDatabase.getDatabaseInstance(ContactApp.getAppContext()).dao()
 
     fun getContacts():LiveData<List<Contact>>{
 
@@ -21,6 +21,10 @@ class ContactRepository {
     }
     suspend fun deleteContact(contact: Contact){
         dao.deleteContact(contact)
+    }
+
+    suspend fun deleteAllContacts() {
+        dao.deleteAllContact()
     }
 
 }

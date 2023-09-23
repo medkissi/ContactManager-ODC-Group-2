@@ -33,4 +33,22 @@ class ContactViewModel:ViewModel() {
 
         }
     }
+    fun updateContact(contact: Contact){
+        viewModelScope.launch {
+            withContext(Dispatchers.IO){
+                repository.updateContact(contact)
+            }
+
+        }
+    }
+
+    fun deleteAllContact() {
+
+        viewModelScope.launch {
+            withContext(Dispatchers.IO){
+                repository.deleteAllContacts()
+            }
+
+        }
+    }
 }
