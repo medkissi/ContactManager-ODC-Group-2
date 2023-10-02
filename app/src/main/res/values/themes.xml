@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
     <style name="Theme.ContactManagerGroup2" parent="Base.Theme.ContactManagerGroup2" />
+
+    <style name="round_image">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
